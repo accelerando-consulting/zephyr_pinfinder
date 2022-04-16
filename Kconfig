@@ -1,0 +1,32 @@
+mainmenu "App"
+
+config APP_USE_GPIO0
+       bool "Use GPIO unit 0"
+       default true
+
+config APP_USE_GPIO1
+       bool "Use GPIO unit 1"
+       default false
+
+config APP_USE_LED
+       bool "Use LED as blinker"
+       default true
+
+config APP_SKIP_MASK_GPIO0
+       int "bit mask of pins to ignore on GPIO0"
+       default 0
+
+config APP_SKIP_MASK_GPIO1
+       int "bit mask of pins to ignore on GPIO1"
+       default 0
+
+config APP_LED_MASK_GPIO0
+       int "addition pin(s) to use as LED"
+       default 0
+
+config APP_LED_MASK_GPIO1
+       int "addition pin(s) to use as LED"
+       default 0
+
+source "Kconfig.zephyr"
+
